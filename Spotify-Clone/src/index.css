@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  @keyframes slide {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-slide {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 30s linear infinite;  /* Increased the duration to 20 seconds */
+}
+
+
+
+.start-slide {
+    animation: slide 30s linear infinite;  /* Trigger slide on play */
+}
+
+.start-slide:after {
+    content: " ";
+    animation: slide 30s linear infinite;
+}
+
+
