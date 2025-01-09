@@ -10,7 +10,6 @@ const PlayerContextProvider = (props) => {
 
     export const url = import.meta.env.VITE_BACKEND_URL;
     
-    
     const [songsData, setSongsData] = useState([]);
     const [albumsData, setAlbumsData] = useState([]);
     const [track, setTrack] = useState(null);
