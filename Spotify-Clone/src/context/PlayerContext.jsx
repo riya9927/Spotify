@@ -2,13 +2,14 @@ import { createContext, useRef, useState, useEffect } from "react";
 import axios from 'axios'
 
 export const PlayerContext = createContext();
+export const url = import.meta.env.VITE_BACKEND_URL;
+
 
 const PlayerContextProvider = (props) => {
     const audioRef = useRef();
     const seekBar = useRef();
     const seekBg = useRef();
 
-    export const url = import.meta.env.VITE_BACKEND_URL;
     
     const [songsData, setSongsData] = useState([]);
     const [albumsData, setAlbumsData] = useState([]);
